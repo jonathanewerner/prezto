@@ -1,11 +1,21 @@
-#
-# Defines environment variables.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+export VELOYO_DIR=~/veloyo
+export EDITOR=gvim
+export CHROME_BIN="/usr/bin/chromium"
+export BROWSER="/usr/bin/chromium"
+export TERM=xterm-256color
+export ANDROID_HOME=/home/jwerner/Android/Sdk
+export ANDROID_NDK=/home/jwerner/Android/Ndk
+
+export NVM_DIR="/home/jwerner/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# PATH
+path+=('/home/jwerner/bin')
+path+=('/home/jwerner/.dotfiles/bin')
+export PATH
+
