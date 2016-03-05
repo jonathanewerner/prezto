@@ -24,7 +24,10 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
+  'autosuggestions' \
   'environment' \
+  'node' \
+  'pacman' \
   'terminal' \
   'editor' \
   'history' \
@@ -32,6 +35,9 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'git' \
+  'fasd' \
+  'syntax-highlighting' \
   'prompt'
 
 #
@@ -39,7 +45,8 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the query found color.
-zstyle ':prezto:module:autosuggestions:color' found ''
+# Deactivated means gray, '' means white
+# zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Editor
@@ -70,7 +77,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 #
 
 # Set the query found color.
-zstyle ':prezto:module:history-substring-search:color' found ''
+# zstyle ':prezto:module:history-substring-search:color' found ''
 
 # Set the query not found color.
 # zstyle ':prezto:module:history-substring-search:color' not-found ''
@@ -124,19 +131,27 @@ zstyle ':prezto:module:prompt' theme 'pure'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'line' \
-  'cursor' \
-  'root'
-#
+
+# zstyle ':prezto:module:syntax-highlighting' highlighters \
+#   'main' \
+#   'brackets' \
+#   'pattern' \
+#   'cursor' \
+#   'root'
+
+
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
 # Set syntax highlighting styles.
-# zstyle ':prezto:module:syntax-highlighting' styles \
-#   'builtin' 'bg=blue' \
-#   'command' 'bg=blue' \
-#   'function' 'bg=blue'
+zstyle ':prezto:module:syntax-highlighting' styles \
+  'builtin' 'none' \
+  'command' 'none' \
+  'hashed-command' 'none' \
+  'path' 'none' \
+  'alias' 'none' \
+  'double-quoted-argument' 'none' \
+  'single-quoted-argument' 'none' \
+  'path_prefix' 'none' \
+  'function' 'none'
 
 #
 # Terminal
