@@ -27,8 +27,8 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'environment' \
   'node' \
-  'pacman' \
   'terminal' \
+	'osx' \
   'editor' \
   'history' \
   'directory' \
@@ -36,8 +36,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'git' \
-  'fasd' \
-  'syntax-highlighting' \
   'prompt'
 
 #
